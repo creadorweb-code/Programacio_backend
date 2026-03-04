@@ -1,10 +1,10 @@
 
 
-//var generateName = require('sillyname');
+var generateName = require('sillyname');
 
-//var sillyName = generateName();
+var sillyName = generateName();
 
-//console.log(sillyName); 
+console.log(sillyName); 
 
 
 const { randomSuperhero } = require('superheroes');
