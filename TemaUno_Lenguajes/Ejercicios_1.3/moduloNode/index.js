@@ -1,8 +1,8 @@
 const fs = require('fs');  // Importa la herramienta de sistema de archivos...
 
-fs.writeFile('archivo.txt', 'Hola desde NodeJS', (err) => {
+fs.writeFile('archivo.txt', 'Hola desde NodeJS.', (err) => {
     if (err) throw err;
-    console.log('El archivo ha sido creado con éxito.');
+    console.log('El archivo ha sido creado con éxito..');
 
 
  // 2️⃣ Leer el archivo después de crearlo.
