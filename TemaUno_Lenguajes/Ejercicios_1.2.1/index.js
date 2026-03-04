@@ -7,7 +7,7 @@
 
 /* b. Declaración de todos los diferentes tipos de datos */
 
-let numero = 43;                  // Number
+let numero = 45;                  // Number
 let texto = "Hola Mundo";         // String
 let booleano = true;              // Boolean
 let indefinido;                   // Undefined
