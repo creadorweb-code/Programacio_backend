@@ -12,7 +12,7 @@ let texto = "Hola Mundo";         // String
 let booleano = true;              // Boolean
 let indefinido;                   // Undefined
 let nulo = null;                  // Null
-let objeto = { nombre: "Hugo Sanchez Leyva" };  // Object
+let objeto = { nombre: "Hugo Sanchez" };  // Object
 
 console.log(numero, texto, booleano, indefinido, nulo, objeto);
 
