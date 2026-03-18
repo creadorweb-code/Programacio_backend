@@ -1,0 +1,43 @@
+
+
+    {
+    
+        "ip" : "187.150.52.154" ,
+        
+        "ISP":{
+        
+            "asn" : "AS8151" ,
+            "org" : "Uninet SA de CV" ,
+            "isp" : "Uninet SA de CV"
+        
+        } ,
+
+        "ubicación":{
+        
+            "país" : "México" ,
+            "country_code" : "MX" ,
+            "ciudad" : "Cancún" ,
+            "estado" : "Quintana Roo" ,
+            "código postal" : "" ,
+            "latitud" : 21.192213072299666 ,
+            "longitud" : -86.86619162886305 ,
+            "zona horaria" : "América/Cancún" ,
+            "hora local" : "2026-03-18T14:25:21"
+        
+        } ,
+
+        "riesgo":{
+        
+            "is_mobile" : false ,
+            "is_vpn" : falso ,
+            "is_tor" : falso ,
+            "is_proxy" : false ,
+            "is_datacenter" : false ,
+            "puntuación_riesgo" : 0
+        
+        }
+    
+    }
+
+
+    

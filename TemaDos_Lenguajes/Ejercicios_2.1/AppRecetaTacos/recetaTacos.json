@@ -1,0 +1,99 @@
+[
+  {
+    "id": "0001",
+    "tipo": "taco",
+    "nombre": "Taco lechon",
+    "precio": 20.00,
+    "ingredientes": {
+      "proteina": {
+        "nombre": "Puerco",
+        "preparacion": "Horneado"
+      },
+      "salsa": {
+        "nombre": "Tomate verde",
+        "picor": "Medio"
+      }
+    },
+    "acompañamientos": [
+      {
+        "nombre": "Cebolla",
+        "cantidad": "1 cucharada",
+        "ingredientes": ["Cebolla blanca", "Cilantro", "Naranja", "Sal"]
+      },
+      {
+        "nombre": "Guacamole",
+        "cantidad": "2 cucharadas",
+        "ingredientes": ["Aguacate", "Jugo de limon", "Sal", "Cilantro"]
+      }
+    ]
+  },
+  {
+    "id": "0002",
+    "tipo": "taco",
+    "nombre": "Taco de pollo",
+    "precio": 18.00,
+    "ingredientes": {
+      "proteina": {
+        "nombre": "Pollo",
+        "preparacion": "Asado"
+      },
+      "salsa": {
+        "nombre": "Salsa roja",
+        "picor": "Alto"
+      }
+    },
+    "acompañamientos": [
+      {
+        "nombre": "Repollo",
+        "cantidad": "1 taza",
+        "ingredientes": ["Repollo", "Zanahoria", "Mayonesa"]
+      }
+    ]
+  },
+  {
+    "id": "0003",
+    "tipo": "taco",
+    "nombre": "Taco de pescado",
+    "precio": 25.00,
+    "ingredientes": {
+      "proteina": {
+        "nombre": "Pescado",
+        "preparacion": "Empanizado"
+      },
+      "salsa": {
+        "nombre": "Salsa chipotle",
+        "picor": "Medio"
+      }
+    },
+    "acompañamientos": [
+      {
+        "nombre": "Ensalada",
+        "cantidad": "1 porción",
+        "ingredientes": ["Lechuga", "Tomate", "Pepino"]
+      }
+    ]
+  },
+  {
+    "id": "0004",
+    "tipo": "taco",
+    "nombre": "Taco de res",
+    "precio": 22.00,
+    "ingredientes": {
+      "proteina": {
+        "nombre": "Res",
+        "preparacion": "A la plancha"
+      },
+      "salsa": {
+        "nombre": "Salsa habanero",
+        "picor": "Muy alto"
+      }
+    },
+    "acompañamientos": [
+      {
+        "nombre": "Frijoles",
+        "cantidad": "1/2 taza",
+        "ingredientes": ["Frijol", "Queso"]
+      }
+    ]
+  }
+]
