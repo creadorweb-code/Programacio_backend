@@ -1,0 +1,33 @@
+{
+"ip": "201.108.113.188",
+"isp"
+:
+{
+"asn": "AS8151",
+"org": "Uninet S.A. de C.V.",
+"isp": "Uninet S.A. de C.V."
+},
+"location"
+:
+{
+"country": "Mexico",
+"country_code": "MX",
+"city": "Bacalar",
+"state": "Quintana Roo",
+"zipcode": "",
+"latitude": 18.691457154493868,
+"longitude": -88.41046131116767,
+"timezone": "America/Cancun",
+"localtime": "2026-03-17T23:46:30"
+},
+"risk"
+:
+{
+"is_mobile": false,
+"is_vpn": false,
+"is_tor": false,
+"is_proxy": false,
+"is_datacenter": false,
+"risk_score": 0
+}
+}
