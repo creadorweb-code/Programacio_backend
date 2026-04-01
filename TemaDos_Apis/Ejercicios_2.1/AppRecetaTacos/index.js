@@ -1,23 +1,35 @@
-// a. Importar dependencias
-import express from 'express';
-import bodyParser from 'body-parser';
+// a) Importar dependencias 
+import express from "express";
+import bodyParser from "body-parser";
 
-// b. Crear instancia de express
+// a) Cadena JSON (copiada de tu archivo recetaTacos.json)
+import fs from 'fs';
+
+const recetasTacos = JSON.parse(
+  fs.readFileSync('./recetaTacos.json', 'utf-8')
+);
+
+// Crear app
 const app = express();
-
-// c. Configurar puerto
 const PORT = 3000;
 
-// Middleware
-app.use(bodyParser.json());
-app.use(express.static('public'));
+// c) Servir archivos estáticos (HTML y CSS)
+app.use(express.static("public"));
 
-// Ruta de prueba
-app.get('/', (req, res) => {
-    res.send('Servidor funcionando correctamente 🚀');
+// e) Middleware para JSON
+app.use(bodyParser.json());
+
+// f) Endpoint dinámico
+app.get("/receta/:type", (req, res) => {
+
+  const elegirTaco = recetasTacos.find(
+    r => r.ingredientes.proteina.nombre.toLowerCase() === req.params.type.toLowerCase()
+  );
+
+  res.json(elegirTaco || { error: "Receta no encontrada" });
 });
 
-// d. Iniciar servidor
+// Iniciar servidor
 app.listen(PORT, () => {
-    console.log(`Servidor corriendo en http://localhost:${PORT}`);
+  console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });

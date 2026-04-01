@@ -1,21 +1,33 @@
 import axios from "axios";
 
-const obtenerDatos = async () => {
+const ejecutar = async () => {
   try {
-    const response = await axios.get(
-      'https://reqres.in/api/users/2',
+    // LOGIN
+    const login = await axios.post(
+      "https://dummyjson.com/user/login",
+      {
+        username: "emilys",
+        password: "emilyspass"
+      }
+    );
+
+    const token = login.data.accessToken;
+
+    // PETICIÓN PROTEGIDA
+    const user = await axios.get(
+      "https://dummyjson.com/user/me",
       {
         headers: {
-          'x-api-key': 'reqres_7f279524a10c4e1a846225cb597f78c0'
+          Authorization: `Bearer ${token}`
         }
       }
     );
 
-    console.log(response.data);
+    console.log("👤 Usuario:", user.data);
 
   } catch (error) {
-    console.error(error.response?.data || error.message);
+    console.log("❌ ERROR:", error.response?.data || error.message);
   }
 };
 
-obtenerDatos();
+ejecutar();

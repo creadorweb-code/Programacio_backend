@@ -7,43 +7,52 @@
 </head>
 <body>
 
-    <h1>Tacoshidos 🌮</h1>
+    <h1>Tacoschidos 🌮</h1>
 
-    <!-- IMPORTANTE: id="form" -->
     <form id="form" class="buttons">
-        <button type="button" data-type="pastor">🌮</button>
-        <button type="button" data-type="suadero">🌮</button>
-        <button type="button" data-type="pollo">🐔</button>
-        <button type="button" data-type="puerco">🐷</button>
+     <button type="button" data-type="Puerco">🐷</button>
+     <button type="button" data-type="Taco de cochinita pibil">🌮</button>
+     <button type="button" data-type="Pollo">🐔</button>
+     <button type="button" data-type="Pescado">🐟</button>
     </form>
 
-    <div id="Container"></div>
+     <div id="Container"></div>
 
-    <script>
-    
-    document.querySelectorAll("#form button").forEach(button => {
-      button.addEventListener("click", async (event) => {
-        const type = event.target.getAttribute("data-type").toLowerCase();
-        
-      
-        const response = await fetch(`/receta/${type}`);
-        const receta = await response.json();
+     <script>
+    const botones = document.querySelectorAll("button");
+    const container = document.getElementById("Container");
 
+    botones.forEach(boton => {
+      boton.addEventListener("click", () => {
+        const tipo = boton.getAttribute("data-type");
 
-        const contenedor = document.getElementById("Container"); 
-        if (receta.error) {
-          contenedor.innerHTML = "<h2>Receta no encontrada</h2>"; //si no se recupera el contenido HTML de un elemento.
-        } else {
-          contenedor.innerHTML = `
-            <h2>${receta.nombre}</h2> 
-            <h3>Ingredientes:</h3>
-            <ul id="ingredientesLista">
-              <li>Carne de: ${receta.ingredientes.proteina.nombre}, Modo preparación: ${receta.ingredientes.proteina.preparacion}</li>
-              <li> Salsa: ${receta.ingredientes.salsa.nombre} (${receta.ingredientes.salsa.picor})</li>
-              ${receta.ingredientes.acompañamientos.map(acompañamiento => `<li> Acompañamiento: ${acompañamiento.cantidad} : ${acompañamiento.nombre}</li>`).join("")}</ul>`;
-        }
+        fetch(`/receta/${tipo}`)
+          .then(response => response.json())
+          .then(data => {
+
+            if (data.error) {
+              container.innerHTML = "<p>No se encontró la receta</p>";
+              return;
+            }
+
+            container.innerHTML = `
+              <div class="card">
+                <h2>${data.nombre}</h2>
+                <p><strong>Precio:</strong> $${data.precio}</p>
+                <p><strong>Proteína:</strong> ${data.ingredientes.proteina.nombre}</p>
+
+                <h3>Acompañamientos:</h3>
+                <ul>
+                  ${data.acompañamientos.map(a => `
+                    <li>${a.nombre} - ${a.ingredientes.join(", ")}</li>
+                  `).join("")}
+                </ul>
+              </div>
+            `;
+          });
       });
     });
   </script>
+
 </body>
 </html>
