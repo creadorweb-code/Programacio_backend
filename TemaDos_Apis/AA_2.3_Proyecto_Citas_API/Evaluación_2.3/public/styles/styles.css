@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+
+    background:
+        linear-gradient(135deg, #020617, #0f172a),
+        url("/images/fondo.jpg");
+
+    background-size: cover;
+}
+
+/* centrar */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* tarjeta principal */
+.card {
+    width: 500px;
+    padding: 40px;
+    border-radius: 25px;
+
+    background: rgba(117, 134, 171, 0.7);
+    backdrop-filter: blur(25px);
+
+    box-shadow:
+        0 0 60px rgba(0,0,0,0.9),
+        0 0 40px rgba(56,189,248,0.2);
+
+    text-align: center;
+
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* 🔥 NUEVA BARRA DEL TÍTULO */
+.title-box {
+    padding: 15px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+
+    background:
+        linear-gradient(rgba(2,6,23,0.7), rgba(2,6,23,0.9)),
+        url("/images/fondo.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    box-shadow:
+        0 0 30px rgba(0,0,0,0.6),
+        0 0 20px rgba(56,189,248,0.2);
+
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* título */
+h1 {
+    font-size: 34px;
+    margin: 0;
+    color: white;
+    text-shadow: 0 0 10px black;
+}
+
+/* etiqueta */
+.tag {
+    display: inline-block;
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    color: black;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+/* definición */
+.def {
+    margin: 20px 0;
+    font-size: 17px;
+    line-height: 1.7;
+
+    color: #e2e8f0;
+
+    text-align: justify;   /* 🔥 clave */
+    text-justify: inter-word;
+
+    padding: 10px 15px;
+
+    background: rgba(255,255,255,0.03);
+    border-radius: 10px;
+
+    border-left: 3px solid #38bdf8;
+}
+/* caja de ejemplo */
+.example {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 20px;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)),
+        url("/images/nodemo.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    box-shadow:
+        0 0 30px rgba(0,0,0,0.6),
+        0 0 20px rgba(56,189,248,0.2);
+}
+
+/* título ejemplo */
+.example h3 {
+    margin-bottom: 10px;
+    color: #facc15;
+}
+
+
+/* botón */
+button {
+    margin-top: 25px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 15px;
+
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    color: black;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+/* hover botón */
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #38bdf8;
+}
+
+/* animación ligera */
+.card {
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

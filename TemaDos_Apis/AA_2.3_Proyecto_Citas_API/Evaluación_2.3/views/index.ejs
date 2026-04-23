@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistemas PRO</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+       
+        <div class="title-box">
+            <h1>💻 <%= palabra %></h1>
+        </div>
+
+        <span class="tag"><%= categoria %></span>
+
+        <p class="def"><%= definicion %></p>
+
+        <% if (ejemplo) { %>
+        <div class="example">
+            <h3> Ejemplo</h3>
+            <p><%= ejemplo %></p>
+        </div>
+        <% } %>
+
+        <button onclick="location.reload()">🔄 Nuevo concepto</button>
+
+    </div>
+
+</div>
+
+</body>
+</html>
