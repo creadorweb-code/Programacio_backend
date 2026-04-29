@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-// Ruta principal
+//Ruta principal
 app.get('/', (req, res) => {
     res.send('Bienvenido a mi API CRUD');
 });

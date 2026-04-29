@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 // Cargar variables de entorno
 dotenv.config();
 
-// 🔍 Verificar si se está leyendo el .env
+// Verificar si se está leyendo el .env
 console.log("ENV:", process.env.URI);
 
 // Tomar la URI desde .env
