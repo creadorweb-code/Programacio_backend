@@ -5,7 +5,7 @@ import Usuario from './models/usuario.model.js';
 const app = express();
 const puerto = 3000;
 
-//  Middlewares (IMPORTANTE para Postman)
+//  Middlewares (IMPORTANTE para Postma)
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
