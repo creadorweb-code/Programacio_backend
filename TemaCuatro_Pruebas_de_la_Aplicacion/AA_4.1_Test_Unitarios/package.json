@@ -1,0 +1,12 @@
+{
+  "name": "aa_4.1_test_unitarios",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "suma.js",
+  "scripts": {
+    "test": "jest"
+  }
+}
